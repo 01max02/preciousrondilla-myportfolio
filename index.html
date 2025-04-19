@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Precious Rondilla - Student Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Courier+Prime&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/nickainley" rel="stylesheet">
+</head>
+<body>
+    <div class="circle circle-5"></div>
+    <div class="background-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+        <div class="circle circle-4"></div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="#">preciousrondilla</a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">_home</a></li>
+                <li><a href="#projects">_projects</a></li>
+                <li><a href="#skills">_skills</a></li>
+                <li><a href="#about">_about</a></li>
+                <li><a href="#contact">_contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main id="home">
+        <div class="hero-container">
+            <div class="hero-text">
+                <p class="greeting" style="position: relative; top: -50px; transform: translateX(-50%);">Hi!, I'm</p>
+                <h1 class="name">Precious</h1>
+                <p class="title">a student <span class="highlight">developer</span></p>
+                
+               
+                <div class="cta-buttons">
+                    <div class="social-links">
+                        <a href="src/Precious Resume (2).pdf" class="resume-btn" download><i class="fas fa-download"></i> Resume</a>
+                        <a href="https://github.com/01max02" class="social-icon github"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/precious-rondilla-813741323/" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=100010426838083" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@precious.rndlla" class="social-icon tiktok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Precious%20Rondilla-Photoroom-VxFmxAVwBi1dFbknRRCWQlC45rUzV1.png" alt="Precious Rondilla Illustration">
+            </div>
+        </div>
+
+    <!-- Projects Section -->
+    <section id="projects">
+
+    <!-- Glow effects -->
+    <div class="glow" style="top: 20%; left: 10%;"></div>
+    <div class="glow" style="top: 50%; left: 80%;"></div>
+    <div class="glow" style="top: 80%; left: 30%;"></div>
+
+    <!-- Projects Section -->
+    <section class="proj-section">
+        <div class="container">
+            <h2 class="proj-main-title">_my projects</h2>
+            
+            <p class="proj-introduction">
+                Here's a collection of my recent work that showcases my skills and expertise in development. 
+                Each project demonstrates my ability to create responsive, accessible, and visually appealing websites.
+            </p>
+
+            <!-- Project Filters -->
+            <div class="proj-filter-container">
+                <button class="proj-filter-button active" data-filter="all">All Projects</button>
+                <button class="proj-filter-button" data-filter="web">Web Development</button>
+                <button class="proj-filter-button" data-filter="ui">Mobile App</button>
+            </div>
+
+            <!-- Featured Project -->
+            <div class="proj-featured-container" style="padding: 0 20px;">
+                <div class="proj-featured-label">Featured</div>
+                <div class="proj-featured-wrapper">
+                    <div class="proj-featured-img-container">
+                        <img src="src/ecom.png" alt="E-commerce Website">
+                    </div>
+                    
+                    <div class="proj-featured-details">
+                        <h3 class="proj-featured-heading">E-commerce Website</h3>
+                        <p class="proj-featured-text">
+                          Xendora is an eCommerce website designed to offer a wide range of photography studio equipment, tools, and high-quality cameras. 
+                        </p>
+                        <div class="proj-featured-technologies">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Bootstrap</span>
+                            <span>Python</span>
+                            <span>Flask</span>
+                            <span>Firebase</span>
+                            <span>Jinja2</span>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="proj-featured-links">
+                            <a href="#" class="view-details" data-project="ecommerce">
+                                <i class="fas fa-info-circle"></i>
+                                <span>View Details</span>
+                            </a>
+                            <a href="https://github.com/01max02/XendoraCamera" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                <span>Live Demo</span>
+                            </a>
+                            <a href="https://github.com/01max02/XendoraCamera" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>Source Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="proj-items-grid">
+                <!-- Project 1 -->
+                <div class="proj-item" data-category="web">
+                    <div class="proj-item-img-wrapper">
+                        <img src="src/venos web.png" alt="VenOs Website">
+                        <div class="proj-item-overlay">
+                            <div class="proj-item-actions">
+                                <a href="#" class="view-details" data-project="portfolio"><i class="fas fa-info-circle"></i></a>
+                                <a href="https://github.com/01max02/VENOS-POINT-OF-SALE-WEBSITE" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proj-item-info">
+                        <h3 class="proj-item-heading">VenOs Point-of-Sale Website App</h3>
+                        <p class="proj-item-text">
+                          VenOs is a web-based Point of Sale (POS) application developed as a group project to support small business owners who can't afford expensive or customized POS systems. 
+                        </p>
+                        <div class="proj-item-tech-tags">
+                            <span class="proj-item-tech">HTML</span>
+                            <span class="proj-item-tech">CSS</span>
+                            <span class="proj-item-tech">JavaScript</span>
+                            <span class="proj-item-tech">Bootstrap</span>
+                            <span class="proj-item-tech">PHP</span>
+                            <span class="proj-item-tech">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="proj-item" data-category="ui">
+                    <div class="proj-item-img-wrapper">
+                        <img src="src/venos.png" alt="VenOs Point-of-Sale Mobile App">
+                        <div class="proj-item-overlay">
+                            <div class="proj-item-actions"> 
+                                <a href="#" class="view-details" data-project="dashboard"><i class="fas fa-info-circle"></i></a>
+                                <a href="src/venos app.mp4" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proj-item-info">
+                        <h3 class="proj-item-heading">VenOs Point-of-Sale Mobile App</h3>
+                        <p class="proj-item-text">
+                          A mobile app version of the VenOs Point-of-Sale system created with Android Studio
+                        </p>
+                        <div class="proj-item-tech-tags">
+                            <span class="proj-item-tech">Android Studio</span>
+                            <span class="proj-item-tech">Java</span>
+                            <span class="proj-item-tech">Firebase</span>
+                            <span class="proj-item-tech">SQLite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="proj-item" data-category="web">
+                    <div class="proj-item-img-wrapper">
+                        <img src="src/lms_photo.png" alt="Library Management System">
+                        <div class="proj-item-overlay">
+                            <div class="proj-item-actions">
+                                <a href="#" class="view-details" data-project="new-project"><i class="fas fa-info-circle"></i></a>
+                                <a href="https://drive.google.com/file/d/1reYccbsipnerZadpmFo4_FDwIWpzWWV_/view?usp=sharing" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="proj-item-info">
+                        <h3 class="proj-item-heading">Library Management System</h3>
+                        <p class="proj-item-text">
+                          A Library Management System made for Liceo De Luisiana is a desktop application that performs CRUD operations to manage library data.
+                        </p>
+                        <div class="proj-item-tech-tags">
+                            <span class="proj-item-tech">Java</span>
+                            <span class="proj-item-tech">MySQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+            
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <!-- Glow effects -->
+    <div class="glow" style="top: 30%; left: 20%;"></div>
+    <div class="glow" style="top: 60%; left: 70%;"></div>
+    <div class="glow" style="top: 80%; left: 30%;"></div>
+
+    <!-- Skills Section -->
+    <section class="skill-section">
+        <div class="container">
+            <h2 class="skill-main-heading">_my skills</h2>
+            
+            <p class="skill-description">
+                I specialize in web development with expertise in creating responsive, 
+                accessible, and visually appealing websites. Here are the technologies and tools 
+                I work with to bring designs to life.
+            </p>
+
+            <!-- Skill Categories -->
+            <div class="skill-filter-wrapper">
+                <button class="skill-filter-btn active" data-category="languages">Tech Stack</button>
+                <button class="skill-filter-btn" data-category="tools">Tools & Frameworks</button>
+                <button class="skill-filter-btn" data-category="soft-skills">Soft Skills</button>
+            </div>
+
+            <!-- Skills Content -->
+            <div class="skill-content-panel active" id="languages">
+                <!-- Languages Skills Carousel -->
+                <div class="skill-slider-wrapper">
+                    <div class="skill-slider">
+                        <!-- HTML -->
+                        <div class="skill-card">
+                            <i class="fab fa-html5 skill-card-icon"></i>
+                            <p class="skill-card-title">HTML</p>
+                        </div>
+                        <!-- CSS -->
+                        <div class="skill-card">
+                            <i class="fab fa-css3-alt skill-card-icon"></i>
+                            <p class="skill-card-title">CSS</p>
+                        </div>
+                        <!-- JavaScript -->
+                        <div class="skill-card">
+                            <i class="fab fa-js skill-card-icon"></i>
+                            <p class="skill-card-title">JavaScript</p>
+                        </div>
+                        <!-- Python -->
+                        <div class="skill-card">
+                            <i class="fab fa-python skill-card-icon"></i>
+                            <p class="skill-card-title">Python</p>
+                        </div>
+                        <!-- Repeat items for infinite loop -->
+                        <div class="skill-card">
+                            <i class="fab fa-html5 skill-card-icon"></i>
+                            <p class="skill-card-title">HTML</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-css3-alt skill-card-icon"></i>
+                            <p class="skill-card-title">CSS</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-js skill-card-icon"></i>
+                            <p class="skill-card-title">JavaScript</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-python skill-card-icon"></i>
+                            <p class="skill-card-title">Python</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-content-panel" id="tools">
+                <!-- Tools & Frameworks Carousel -->
+                <div class="skill-slider-wrapper">
+                    <div class="skill-slider">
+                        <!-- Figma -->
+                        <div class="skill-card">
+                            <i class="fab fa-figma skill-card-icon"></i>
+                            <p class="skill-card-title">Figma</p>
+                        </div>
+                        <!-- Canva -->
+                        <div class="skill-card">
+                            <img src="src/canva.png" alt="Canva Logo" class="skill-card-icon">
+                            <p class="skill-card-title">Canva</p>
+                        </div>
+                        <!-- MySQL -->
+                        <div class="skill-card">
+                            <i class="fas fa-database skill-card-icon"></i>
+                            <p class="skill-card-title">MySQL</p>
+                        </div>
+                        <!-- XAMPP -->
+                        <div class="skill-card">
+                            <i class="fas fa-server skill-card-icon"></i>
+                            <p class="skill-card-title">XAMPP</p>
+                        </div>
+                        <!-- Flask -->
+                        <div class="skill-card">
+                            <i class="fas fa-flask skill-card-icon"></i>
+                            <p class="skill-card-title">Flask</p>
+                        </div>
+                        <!-- Jinja2 -->
+                        <div class="skill-card">
+                            <i class="fas fa-code skill-card-icon"></i>
+                            <p class="skill-card-title">Jinja2</p>
+                        </div>
+                        <!-- Repeat items for infinite loop -->
+                        <div class="skill-card">
+                            <i class="fab fa-figma skill-card-icon"></i>
+                            <p class="skill-card-title">Figma</p>
+                        </div>
+                        <div class="skill-card">
+                            <img src="src/canva.png" alt="Canva Logo" class="skill-card-icon">
+                            <p class="skill-card-title">Canva</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-database skill-card-icon"></i>
+                            <p class="skill-card-title">MySQL</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-server skill-card-icon"></i>
+                            <p class="skill-card-title">XAMPP</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-flask skill-card-icon"></i>
+                            <p class="skill-card-title">Flask</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-code skill-card-icon"></i>
+                            <p class="skill-card-title">Jinja2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-content-panel" id="soft-skills">
+                <!-- Soft Skills Carousel -->
+                <div class="skill-slider-wrapper">
+                    <div class="skill-slider">
+                        <!-- Communication -->
+                        <div class="skill-card">
+                            <i class="fas fa-comments skill-card-icon"></i>
+                            <p class="skill-card-title">Communication</p>
+                        </div>
+                        <!-- Leadership -->
+                        <div class="skill-card">
+                            <i class="fas fa-user-tie skill-card-icon"></i>
+                            <p class="skill-card-title">Leadership</p>
+                        </div>
+                        <!-- Teamwork & Collaboration -->
+                        <div class="skill-card">
+                            <i class="fas fa-users skill-card-icon"></i>
+                            <p class="skill-card-title">Teamwork & Collaboration</p>
+                        </div>
+                        <!-- Problem Solving -->
+                        <div class="skill-card">
+                            <i class="fas fa-lightbulb skill-card-icon"></i>
+                            <p class="skill-card-title">Problem Solving</p>
+                        </div>
+                        <!-- Repeat items for infinite loop -->
+                        <div class="skill-card">
+                            <i class="fas fa-comments skill-card-icon"></i>
+                            <p class="skill-card-title">Communication</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-user-tie skill-card-icon"></i>
+                            <p class="skill-card-title">Leadership</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-users skill-card-icon"></i>
+                            <p class="skill-card-title">Teamwork & Collaboration</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-lightbulb skill-card-icon"></i>
+                            <p class="skill-card-title">Problem Solving</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        </section>
+
+
+        <!-- About Me Section -->
+        <section id="about">
+            <div class="pr-portfolio-container">
+                <!-- Left icons -->
+                <div class="pr-portfolio-left-icons">
+                  <div class="pr-portfolio-tech-icon"><i class="fab fa-html5"></i></div>
+                  <div class="pr-portfolio-tech-icon"><i class="fab fa-css3-alt"></i></div>
+                  <div class="pr-portfolio-tech-icon"><i class="fab fa-js"></i></div>
+                  <div class="pr-portfolio-tech-icon"><i class="fab fa-python"></i></div>
+                  <div class="pr-portfolio-vertical-line"></div>
+                </div>
+            
+                <!-- Main content -->
+                <div class="pr-portfolio-main-content">
+                  <div class="pr-portfolio-pink-bg">
+                    <div class="pr-portfolio-title">About</div>
+                  </div>
+            
+                  <div class="pr-portfolio-card-section">
+                    <div class="pr-portfolio-card">
+                      <div class="pr-portfolio-card-profile"></div> <!-- Circle profile image -->
+                      <div class="pr-portfolio-card-title">Precious Rondilla</div>
+                      <div class="pr-portfolio-card-content">    
+                        <p>I'm always eager to take on new challenges and collaborate on exciting projects.</p>
+                      </div>
+                    </div>
+
+                  </div>
+            
+                  <div class="pr-portfolio-expandable-card">
+                    <div class="pr-portfolio-arrow-up" onclick="scrollDescription('up')">&#9650;</div>
+                    <div class="pr-portfolio-card-title">Precious Rondilla</div>
+                    <div class="pr-portfolio-card-content scrollable">
+                        <p>Hello! I'm Precious Rondilla, a second year BSIT student developer with a passion for creating beautiful, responsive, and user-friendly websites. With a strong foundation in HTML, CSS, and JavaScript, I specialize in turning complex design concepts into seamless interactive experiences.
+                    
+                        My journey in web development began in 2023, and since then, I've been continuously expanding my skills and keeping up with the latest technologies and trends in the industry. I believe that great websites are not just visually appealing but also intuitive and accessible to all users.
+                        
+                        When I'm not coding, you can find me doing art commissions and reading books. I'm always eager to take on new challenges and collaborate on exciting projects.</p>
+                    </div>
+                    <div class="pr-portfolio-arrow-down" onclick="scrollDescription('down')">&#9660;</div>
+                  </div>
+                </div>
+            
+                <!-- Right side -->
+                <div class="pr-portfolio-right-side">
+                  <div class="pr-portfolio-certificate-grid" id="pr-portfolio-certificate-trigger">
+                    <div class="pr-portfolio-cert-box"></div>
+                    <div class="pr-portfolio-cert-box"><img src="src/networking cert.png" alt="Networking Certificate" class=""></div>
+                    <div class="pr-portfolio-cert-box"><img src="src/utilizing tech cert.png" alt="Networking Certificate" class=""></div>
+                    <div class="pr-portfolio-cert-box"></div>
+                  </div>
+                  <div class="pr-portfolio-certificate-label">_certificates</div>
+            
+                  <div class="pr-portfolio-phone-mockup">
+                    <div class="pr-portfolio-phone-screen">
+                      <div class="pr-portfolio-phone-header"></div>
+                      <div class="pr-portfolio-phone-content">
+                        <div style="height: 40px; background-color: #f0f0f0; border-radius: 5px;"></div>
+                        <div style="height: 100px; background-color: #f0f0f0; border-radius: 5px;"></div>
+                        <div style="height: 40px; background-color: #f0f0f0; border-radius: 5px;"></div>
+                      </div>
+                      <div class="pr-portfolio-phone-footer">
+                        <div class="pr-portfolio-icon-box"></div>
+                        <div class="pr-portfolio-icon-box"></div>
+                        <div class="pr-portfolio-icon-box"></div>
+                        <div class="pr-portfolio-icon-box"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            
+                <!-- Right icons -->
+                <div class="pr-portfolio-right-icons">
+                  <div class="pr-portfolio-vertical-line-right"></div>
+                  <a href="https://github.com/01max02" class="social-icon github"><div class="pr-portfolio-social-icon"><i class="fab fa-github"></i></div></a>
+                  <a href="https://www.linkedin.com/in/precious-rondilla-813741323/" class="social-icon linkedin"><div class="pr-portfolio-social-icon"><i class="fab fa-linkedin-in"></i></div></a>
+                  <a href="https://www.facebook.com/profile.php?id=100010426838083" class="social-icon facebook"><div class="pr-portfolio-social-icon"><i class="fab fa-facebook"></i></div></a>
+                  <a href="https://www.instagram.com/" class="social-icon instagram"><div class="pr-portfolio-social-icon"><i class="fab fa-instagram"></i></div></a>
+                </div>
+            
+                <!-- Signature -->
+                <div class="pr-portfolio-signature">@precious.rondilla</div>
+            
+              </div>
+        </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+            
+    <!-- Custom cursor -->
+    <div class="contact-cursor"></div>
+    <div class="contact-cursor-follower"></div>
+
+
+    <!-- Glow effects -->
+    <div class="contact-glow" style="top: 20%; left: 10%;"></div>
+    <div class="contact-glow" style="top: 50%; left: 80%;"></div>
+    <div class="contact-glow" style="top: 80%; left: 30%;"></div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <h2 class="contact-section-title">Let's Work Together!</h2>
+
+            <!-- Contact Grid -->
+            <div class="contact-content-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h3 class="contact-form-title">Send Me a Message</h3>
+                    <form action="https://formsubmit.co/precious.rndlla03@email.com" method="POST" class="styled-form">
+                      <input type="text" name="name" required placeholder="Your Name" class="form-input">
+                      <input type="email" name="email" required placeholder="Your Email" class="form-input">
+                      <textarea name="message" required placeholder="Your Message" class="form-textarea"></textarea>
+                      <button type="submit" class="form-button">Send</button>
+                    </form>
+                    <!-- End of embedded contact form -->
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info-container">
+                    <h3 class="contact-info-title">Contact Information</h3>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>_location</h4>
+                            <p>Laguna, Philippines</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>_email</h4>
+                            <a href="mailto:precious.rndlla03@gmail.com">precious.rndlla03@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>_phone</h4>
+                            <a href="tel:+639631548606">+63 9631548606</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-info-content">
+                            <h4>_working hours</h4>
+                            <p>Monday - Friday: 9 AM - 5 PM PHT</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social-links">
+                        <a href="https://github.com/01max02" class="contact-social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/precious-rondilla-813741323/" class="contact-social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100010426838083" class="contact-social-link" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="contact-social-link" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@precious.rndlla" class="contact-social-link" title="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        </section>
+
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <p>&copy; 2025 Precious Rondilla. All rights reserved.</p>
+        <div class="footer-social-links">
+          <a href="https://github.com/01max02" target="_blank" class="footer-social-icon"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/precious-rondilla-813741323/" target="_blank" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=100010426838083" target="_blank" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/" target="_blank" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.tiktok.com/@precious.rndlla" target="_blank" class="footer-social-icon"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
