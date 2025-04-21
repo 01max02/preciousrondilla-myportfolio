@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+
 * {
   margin: 0;
   padding: 0;
@@ -7,14 +7,18 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden; 
+  width: 100%;
 }
 
 body {
-  font-family: "Courier Prime", monospace; /* Updated font family */
-  background-color: #fff3f3; /* Match background color with header */
-  color: #ff6b9d; /* Updated font color */
-  overflow-x: hidden;
+  font-family: "Courier Prime", monospace;
+  background-color: #fff3f3; 
+  color: #ff6b9d;
+  overflow-x: hidden; 
   position: relative;
+  width: 100%; 
+  max-width: 100vw; 
 }
 
 h1,
@@ -23,15 +27,15 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Nickainley", cursive; /* Updated font family for headings */
-  color: #c3456b; /* Updated heading color */
+  font-family: "Nickainley", cursive; 
+  color: #c3456b; 
 }
 
 p,
 a,
 li {
-  font-family: "Courier Prime", monospace; /* Updated font family for text */
-  color: #ff6b9d; /* Updated text color */
+  font-family: "Courier Prime", monospace; 
+  color: #ff6b9d; 
 }
 
 a {
@@ -50,19 +54,19 @@ ul {
   height: 100%;
   overflow: hidden;
   z-index: -1;
-  pointer-events: none; /* Disable pointer events for the container */
+  pointer-events: none;
 }
 
 .circle {
   position: absolute;
   border-radius: 50%;
   background-color: rgba(255, 182, 193, 0.3);
-  pointer-events: auto; /* Enable pointer events for individual circles */
+  pointer-events: auto; 
   transition: transform 0.2s ease;
 }
 
 .circle:hover {
-  transform: translate(10px, 10px); /* Move the circle slightly when hovered */
+  transform: translate(10px, 10px); 
 }
 
 .circle-1 {
@@ -77,6 +81,7 @@ ul {
   height: 250px;
   top: 250px;
   right: 390px;
+  z-index: 1; 
 }
 
 .circle-3 {
@@ -93,7 +98,16 @@ ul {
   left: 60%;
   background-color: rgba(255, 182, 193, 0.3);
   position: absolute;
-  z-index: 3; /* Place it in front of the image */
+  z-index: 3; 
+}
+
+.circle-5 {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgba(255, 182, 193, 0.3);
+  z-index: -1;
 }
 
 /* Header and Navigation */
@@ -103,28 +117,26 @@ header {
   align-items: center;
   padding: 1.5rem 5%;
   width: 100%;
-  box-shadow: none; /* Removed shadow by default */
-  transition: box-shadow 0.3s ease; /* Smooth transition for shadow */
-  position: fixed; /* Changed from sticky to fixed for better scroll control */
-  top: 0;
-  z-index: 1000; /* Ensure it stays above other elements */
-  background-color: #fff3f3; /* Same shade as the background color */
+  box-shadow: none; 
+  transition: box-shadow 0.3s ease;
+  position: fixed; 
+  left: 0; 
+  z-index: 1000; 
+  background-color: #fff3f3; 
   font-family: "Montserrat", sans-serif;
-  height: 80px; /* Fixed height for header to use in calculations */
+  height: 80px; 
+  box-sizing: border-box; 
 }
 
 header.scrolled {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow when scrolled */
-}
-
-header .logo a {
-  text-shadow: none; /* Removed the text shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  text-shadow: none;
 }
 
 .logo a {
   font-size: 1rem;
   color: #ff6b9d;
-  font-weight: 600; /* Montserrat Semi Bold */
+  font-weight: 600; 
 }
 
 .nav-links {
@@ -133,45 +145,56 @@ header .logo a {
 }
 
 .nav-links li a {
-  font-size: 1.1rem; /* Reduced font size */
-  font-weight: 700; /* Adjusted weight */
-  margin-right: 1rem; /* Added spacing between links */
-  color: #ff6b9d; /* Changed color */
+  font-size: 1.1rem; 
+  font-weight: 700; 
+  margin-right: 1rem; 
+  color: #ff6b9d; 
   transition: color 0.3s ease;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  color: #c3456b; /* Color on hover and active state */
+  color: #c3456b; 
 }
 
 .hamburger {
-  display: none;
+  position: fixed;
+  top: 1.5rem; 
+  right: 1.5rem; 
+  display: none; 
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  z-index: 1001; 
 }
 
 .hamburger span {
   width: 25px;
   height: 3px;
-  background-color: pink; /* Changed to pink */
+  background-color: pink; 
   border-radius: 5px;
   transition: all 0.3s ease;
 }
 
-/* Main content area - add padding to account for fixed header */
+
 main {
-  padding-top: 80px; /* Same as header height */
+  padding-top: 80px; 
+  width: 100%;
+  max-width: 100vw; 
+  overflow-x: hidden; 
 }
 
-/* Section Spacing - Fix for the "peaking" issue */
+
 section {
-  scroll-margin-top: 80px; /* This is the key fix - ensures sections start below the header */
-  min-height: 100vh; /* Ensure sections take up at least full viewport height */
+  scroll-margin-top: 80px; 
+  min-height: 100vh; 
   position: relative;
-  padding-top: 20px; /* Add some padding at the top of each section */
-  padding-bottom: 50px; /* Add spacing at the bottom of each section */
+  padding-top: 20px; 
+  padding-bottom: 50px; 
+  width: 100%;
+  max-width: 100vw; 
+  overflow-x: hidden; 
+  box-sizing: border-box; 
 }
 
 /* Hero Section */
@@ -183,7 +206,7 @@ section {
   min-height: calc(100vh - 80px);
   max-width: 1200px;
   margin: 0 auto;
-  margin-bottom: 100px; /* Reduced spacing below the hero section */
+  margin-bottom: 100px;
 }
 
 .hero-text {
@@ -191,14 +214,15 @@ section {
   padding-right: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center align the text vertically */
-  height: 100%; /* Ensure it takes up the full height of the container */
+  justify-content: center; 
+  height: 100%; 
+  margin-bottom: 1rem; 
 }
 
 .greeting {
   font-family: "Courier Prime", monospace;
   font-size: 1.5rem;
-  margin-bottom: -90px; /* Removed the bottom margin to bring it closer to the name */
+  margin-bottom: -90px; 
   margin-left: 393px;
   margin-top: 190px;
   color: #c3456b;
@@ -224,29 +248,29 @@ section {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   margin-left: 120px;
-  font-weight: 900; 
+  font-weight: 900;
   font-family: "Montserrat", sans-serif;
 }
 
 .cta-buttons {
   display: flex;
-  align-items: center; /* Align items vertically */
-  gap: 1.5rem; /* Reduced gap to make icons closer to the resume button */
-  justify-content: flex-start; /* Align to the left */
-  text-align: left; /* Align with the text above */
-  margin-left: 0px; /* Added margin to align with the "precious" text */
-  margin-top: 20px; /* Add spacing between text and buttons */
+  align-items: center; 
+  gap: 1.5rem; 
+  justify-content: flex-start; 
+  text-align: left; 
+  margin-left: 0px; 
+  margin-top: 20px; 
 }
 
 .resume-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #ffc5d6; /* Updated button background color */
-  color: #c3456b; /* Updated text color */
+  background-color: #ffc5d6; 
+  color: #c3456b; 
   padding: 0.80rem 1.5rem;
   border-radius: 50px;
-  font-weight: 600; /* Montserrat Semi Bold */
+  font-weight: 600; 
   transition: all 0.3s ease;
   width: fit-content;
   font-family: "Courier Prime", monospace;
@@ -255,19 +279,19 @@ section {
 .resume-btn:hover {
   background-color: #ff8da1;
   transform: translateY(-2px);
-  box-shadow: 0 4px 6px #c3456b; /* Solid echo shadow */
+  box-shadow: 0 4px 6px #c3456b; 
 }
 
 .resume-btn i {
-  color: #c3456b; /* Updated icon color inside the button */
+  color: #c3456b; 
 }
 
 .social-links {
   display: flex;
-  align-items: center; /* Align icons with the resume button */
+  align-items: center; 
   gap: 1rem;
-  justify-content: flex-start; /* Align icons to the left */
-  margin-left: 90x; /* Added margin to align with the "precious" text */
+  justify-content: flex-start; 
+  margin-left: 90x;
 }
 
 div.social-links {
@@ -283,16 +307,16 @@ div.social-links {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #ffc5d6; /* Updated icon background color */
-  color: #c3456b; /* Updated icon color */
+  background-color: #ffc5d6; 
+  color: #c3456b; 
   transition: all 0.3s ease;
-  font-size: 1.5rem; /* Increased the font size of the icons */
+  font-size: 1.5rem; 
 }
 
 .social-icon:hover {
   background-color: #ff8da1;
   transform: translateY(-2px);
-  box-shadow: 0 4px 6px #c3456b; /* Solid echo shadow */
+  box-shadow: 0 4px 6px #c3456b; 
 }
 
 .hero-image {
@@ -301,6 +325,7 @@ div.social-links {
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 2;
 }
 
 .hero-image img {
@@ -321,21 +346,21 @@ div.social-links {
   right: 100px;
   background-color: rgba(255, 182, 193, 0.5);
   border-radius: 50%;
-  z-index: 3; /* Increased z-index to bring it in front of the hero image */
+  z-index: 3; 
 }
 
-/* Add spacing to ensure sections don't overlap and titles are in view */
+/* Spacing to ensure sections don't overlap and titles are in view */
 #projects,
 #skills,
 #about,
 #contact {
-  scroll-margin-top: 80px; /* Ensure titles are exactly in view when clicked */
+  scroll-margin-top: 80px;
 }
 
 /* Projects Section */
 .proj-section {
   padding: 50px 0 100px;
-  margin-bottom: 50px; /* Reduced spacing below the projects section */
+  margin-bottom: 50px; 
 }
 
 .proj-main-title {
@@ -400,27 +425,27 @@ div.social-links {
 /* Projects grid */
 .proj-items-grid {
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  gap: 30px; /* Add spacing between cards */
-  padding: 0 20px; /* Add left and right spacing */
+  justify-content: center; 
+  align-items: center; 
+  gap: 30px; 
+  padding: 0 20px;
   padding-top: 30px;
 }
 
 .proj-item {
-  width: 380px; /* Fixed width for all project cards */
-  height: 450px; /* Fixed height for all project cards */
-  box-sizing: border-box; /* Include padding and border in size calculation */
+  width: 380px; 
+  height: 450px; 
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensure content is spaced evenly */
+  justify-content: space-between; 
   align-items: center;
-  background: linear-gradient(135deg, #ff7da4, #242424); /* Same gradient as featured container */
-  border-radius: 20px; /* Match the border radius */
-  overflow: hidden; /* Ensure content stays within the card */
-  color: #fff; /* Set text color to white for contrast */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
-  padding: 20px; /* Add padding inside the card */
+  background: linear-gradient(135deg, #ff7da4, #242424);
+  border-radius: 20px;
+  overflow: hidden; 
+  color: #fff; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+  padding: 20px; 
 }
 
 .proj-item:hover {
@@ -428,19 +453,19 @@ div.social-links {
   box-shadow: 0 15px 30px rgba(138, 75, 175, 0.2);
 }
 
-/* Adjust the project card image styles to fit half of the card without borders */
+
 .proj-item-img-wrapper {
   width: 100%;
-  height: 50%; /* Set height to half of the card */
+  height: 50%;
   overflow: hidden;
   position: relative;
-  border: none; /* Remove any border */
+  border: none; 
 }
 
 .proj-item-img-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure the image covers the area */
+  object-fit: cover; 
   transition: all 0.3s ease;
 }
 
@@ -546,9 +571,9 @@ div.social-links {
   overflow: hidden;
   position: relative;
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  margin: 0 auto; /* Ensure it's centered within its parent */
+  justify-content: center;
+  align-items: center; 
+  margin: 0 auto; 
 }
 
 .proj-featured-container::before {
@@ -763,32 +788,31 @@ div.social-links {
   transition: all 0.3s ease;
   cursor: pointer;
   padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   background-color: #ffc3d5;
 }
 
 .skill-card:hover {
   transform: translateY(-10px);
-  background-color: #fffd; /* Secondary shade for hover effect */
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+  background-color: #fffd; 
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .skill-card-icon {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: #c3456b; /* Primary shade for icons */
+  color: #c3456b; 
 }
 
-/* Adjust the Canva logo size in the skill section cards */
 .skill-card-icon {
-  width: auto; /* Default for other icons */
-  height: auto; /* Default for other icons */
+  width: auto; 
+  height: auto; 
 }
 
 .skill-card-icon[src*="canva.png"] {
-  width: 50px; /* Set a smaller width for Canva logo */
-  height: 50px; /* Set a smaller height for Canva logo */
-  object-fit: contain; /* Ensure the logo fits within the dimensions */
+  width: 50px; 
+  height: 50px; 
+  object-fit: contain;
 }
 
 .skill-card-title {
@@ -812,7 +836,7 @@ div.social-links {
   min-height: 100vh;
   padding: 20px;
   font-family: "Courier Prime", monospace;
-  margin-top: 50px; /* Reduced spacing to prevent overlap */
+  margin-top: 50px; 
 }
 
 .pr-portfolio-left-icons {
@@ -848,7 +872,7 @@ div.social-links {
 .pr-portfolio-main-content {
   position: relative;
   margin-left: 120px;
-  margin-right: 120px;
+  margin-right: 0; 
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -857,7 +881,7 @@ div.social-links {
 
 .pr-portfolio-pink-bg {
   width: 85%;
-  height: 300px; /* Reduced height */
+  height: 300px; 
   background-color: #ff99b6;
   border-radius: 15px;
   position: relative;
@@ -866,12 +890,12 @@ div.social-links {
 .pr-portfolio-title {
   position: absolute;
   right: -60px;
-  bottom: 18px;
+  bottom: 10px;
   font-size: 140px;
   color: white;
   font-family: "Nickainley", cursive;
   text-shadow: 2px 2px 0 #ff3873, 4px 4px 0 #ff3873;
-  z-index: 10; /* Bring the "About" text in front */
+  z-index: 10; 
 }
 
 .pr-portfolio-card-section {
@@ -901,19 +925,18 @@ div.social-links {
 }
 
 .pr-portfolio-card-content {
-  font-size: 14px; /* Increased font size for better readability */
+  font-size: 14px; 
   color: #888;
   font-family: "Courier New", Courier, monospace;
-  text-align: justify; /* Makes the text justified */
+  text-align: justify; 
 }
 
-/* Adjust the alignment of the expandable card to align with the portfolio card */
 .pr-portfolio-expandable-card {
-  position: relative; /* Changed to relative positioning */
-  bottom: 250px; /* Align with the top of the portfolio card */
-  left: 330px; /* Align with the portfolio card */
-  width: 45%; /* Match the width of the portfolio card */
-  margin-top: 20px; /* Add spacing below the portfolio card */
+  position: relative; 
+  bottom: 250px; 
+  left: 330px; 
+  width: 45%; 
+  margin-top: 20px; 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   border: none;
   border-radius: 20px;
@@ -963,18 +986,18 @@ div.social-links {
 }
 
 .pr-portfolio-cert-box {
-  width: 100px; /* Increased width */
-  height: 60px; /* Increased height */
+  width: 100px; 
+  height: 60px; 
   background-color: #c25b7c;
   border-radius: 8px;
   left: -50px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease, filter 0.3s ease; /* Added smooth transition for hover effects */
+  transition: box-shadow 0.3s ease, filter 0.3s ease; 
 }
 
 .pr-portfolio-cert-box:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-  filter: brightness(0.8); /* Makes the certificate darker on hover */
+  filter: brightness(0.8); 
 }
 
 .pr-portfolio-cert-box:nth-child(1),
@@ -986,13 +1009,13 @@ div.social-links {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px; /* Match the box's border radius */
+  border-radius: 8px; 
 }
 
 .pr-portfolio-certificate-label {
   margin-top: 15px;
   text-align: center;
-  color: #ff99b6;
+  color: #c3456b;
   font-weight: 1000;
   font-family: "Courier New", Courier, monospace;
   font-size: larger;
@@ -1004,7 +1027,8 @@ div.social-links {
   border: 6px solid black; /* Adjusted border size */
   border-radius: 20px; /* Adjusted border radius */
   position: absolute;
-  left: -150px; /* Move to the left in front of the pink background */
+  left: auto; /* Reset left alignment */
+  right: 100px; /* Move to the right in front of the pink background */
   top: 180px; /* Adjust vertical position to align with the pink background */
   z-index: 2; /* Ensure it appears behind the "About" text */
 }
@@ -1015,7 +1039,10 @@ div.social-links {
   background-color: white;
   display: flex;
   flex-direction: column;
-  border-radius: 20px;
+  border-radius: 15px;
+  background-image: url("src/grad pic.jpg"); /* Replace with the actual path to the grad pic */
+  background-size: cover; /* Ensure the image covers the screen */
+  background-position: center; /* Center the image */
 }
 
 .pr-portfolio-phone-header {
@@ -1394,7 +1421,7 @@ textarea.contact-form-control {
 
   .hero-text {
     padding-right: 0;
-    margin-top: 2rem;
+    margin-top: 0px;
   }
 
   .cta-buttons {
@@ -1406,6 +1433,8 @@ textarea.contact-form-control {
     margin-top: 2rem;
     position: relative;
     z-index: 2; /* Ensure it stays above other elements */
+    order: -1; /* Move the image above the text */
+    margin-bottom: 2rem; /* Add spacing below the image */
   }
 
   .name {
@@ -1418,6 +1447,8 @@ textarea.contact-form-control {
     font-size: 1.2rem;
     margin-left: 0;
     transform: none;
+    align-self:center;
+    left:90px;
   }
 
   .title {
@@ -1443,15 +1474,174 @@ textarea.contact-form-control {
   }
 
   .pr-portfolio-expandable-card {
-    position: relative;
-    left: 0;
-    width: 100%;
-    margin-top: 20px;
+    position: static; /* Change to static positioning */
+    margin-top: 20px; /* Add spacing below the portfolio card */
+    left: 0; /* Reset left alignment */
+    width: 100%; /* Ensure it takes full width */
   }
 
   .pr-portfolio-title {
     font-size: 80px;
     right: -30px;
+  }
+
+  .circle-2 {
+    z-index: 1; /* Place it behind the hero image */
+  }
+
+  .hero-image img {
+    z-index: 2; /* Ensure it stays in front of circle 2 */
+  }
+
+  .proj-featured-container {
+    width: 90%; /* Reduce width for smaller screens */
+    height: auto; /* Allow height to adjust automatically */
+    padding: 20px; /* Add padding for better spacing */
+  }
+
+  .proj-featured-wrapper {
+    flex-direction: column; /* Stack content vertically */
+    gap: 20px; /* Adjust spacing between elements */
+  }
+
+  .proj-featured-img-container {
+    max-width: 100%; /* Ensure image container fits within the card */
+    height: auto; /* Adjust height automatically */
+  }
+
+  .proj-featured-details {
+    text-align: center; /* Center align text for better readability */
+  }
+
+  .proj-featured-heading {
+    font-size: 1.5rem; /* Reduce font size for smaller screens */
+  }
+
+  .proj-featured-text {
+    font-size: 1rem; /* Adjust text size for readability */
+  }
+
+  .skill-card {
+    min-width: 120px; /* Reduce the minimum width */
+    height: 120px; /* Reduce the height */
+    padding: 10px; /* Adjust padding for smaller size */
+    margin: 0 15px; /* Adjust margin for spacing */
+  }
+
+  .skill-card-icon {
+    font-size: 2rem; /* Reduce icon size */
+    margin-bottom: 10px; /* Adjust spacing below icon */
+  }
+
+  .skill-card-title {
+    font-size: 0.8rem; /* Reduce title font size */
+  }
+
+  .circle-1, .circle-2, .circle-3 {
+    display: none; /* Hide these circles on smaller screens */
+  }
+
+  .hero-container {
+    padding-left: 1rem; /* Match left and right padding */
+    padding-right: 1rem; /* Match left and right padding */
+  }
+
+  .pr-portfolio-main-content {
+    margin-left: 1rem; /* Match left and right margin */
+    margin-right: 1rem; /* Match left and right margin */
+  }
+
+  .contact-container {
+    padding-left: 1rem; /* Match left and right padding */
+    padding-right: 1rem; /* Match left and right padding */
+  }
+
+  .cta-buttons {
+    flex-direction: column; /* Stack buttons and icons */
+    align-items: center; /* Center align the buttons and icons */
+    gap: 1rem; /* Add spacing between buttons and icons */
+  }
+
+  .resume-btn {
+    width: 100%; /* Make the button take full width */
+    text-align: center; /* Center align the text */
+  }
+
+  .social-links {
+    justify-content: center; /* Center align the icons */
+    margin-top: 1rem; /* Add spacing above the icons */
+  }
+
+  .social-icon {
+    width: 40px; /* Adjust icon size for smaller screens */
+    height: 40px; /* Adjust icon size for smaller screens */
+    font-size: 1.2rem; /* Adjust font size for smaller screens */
+  }
+
+  .social-icon {
+    border-radius: 50%; /* Make icons circular */
+  }
+
+  .resume-btn {
+    border-radius: 30%; /* Make the resume button circular */
+    padding: 0.7rem; /* Adjust padding for circular shape */
+    width: auto; /* Ensure the button doesn't stretch */
+    height: auto; /* Ensure the button doesn't stretch */
+  }
+
+  .greeting {
+    position: absolute; /* Ensure it stays positioned relative to the big "Precious" */
+    top: 10px; /* Adjust position to align with the top of "Precious" */
+    right: 10px; /* Align to the right of the screen */
+    font-size: 1rem; /* Adjust font size for smaller screens */
+    color: #c3456b; /* Ensure visibility */
+  }
+
+  body {
+    text-align: center; /* Center align text content */
+    padding-left: 1rem; /* Add equal padding on left */
+    padding-right: 1rem; /* Add equal padding on right */
+  }
+
+  .hero-container {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align elements */
+    text-align: center; /* Center align text */
+  }
+
+  .cta-buttons {
+    justify-content: center; /* Center align buttons */
+    align-items: center; /* Center align buttons */
+  }
+
+  .social-links {
+    justify-content: center; /* Center align social icons */
+  }
+
+  .proj-items-grid {
+    justify-content: center; /* Center align project items */
+  }
+
+  .pr-portfolio-main-content {
+    margin-left: auto; /* Center align content */
+    margin-right: auto; /* Center align content */
+  }
+
+  .contact-container {
+    margin-left: auto; /* Center align contact section */
+    margin-right: auto; /* Center align contact section */
+  }
+
+  .pr-portfolio-phone-mockup {
+    width: 95px; /* Reduced width */
+    height: 200px; /* Reduced height */
+    border: 6px solid black; /* Adjusted border size */
+    border-radius: 20px; /* Adjusted border radius */
+    position: absolute;
+    left: auto; /* Reset left alignment */
+    right: 50px; /* Move to the right in front of the pink background */
+    top: 200px; /* Adjust vertical position to align with the pink background */
+    z-index: 1; /* Ensure it appears behind the "About" text */
   }
 }
 
@@ -1499,6 +1689,56 @@ textarea.contact-form-control {
   }
 }
 
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Make the hamburger visible on smaller screens */
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem; /* Keep it on the right side */
+    z-index: 1001; /* Ensure it stays above other elements */
+  }
+
+  .nav-links {
+    display: none; /* Hide navigation links by default */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show navigation links when active */
+    flex-direction: column;
+    position: fixed;
+    top: 80px; /* Below the header */
+    right: 0;
+    width: 100%;
+    background-color: #fff3f3; /* Match the header background */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem 0;
+    z-index: 1000;
+  }
+
+  body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .hero-container {
+    padding-left: 1rem; /* Match left and right padding */
+    padding-right: 1rem; /* Match left and right padding */
+  }
+
+  .nav-links {
+    width: 100%; /* Ensure navigation links fit within the screen */
+  }
+
+  .pr-portfolio-main-content {
+    margin-left: 1rem; /* Match left and right margin */
+    margin-right: 1rem; /* Match left and right margin */
+  }
+
+  .contact-container {
+    padding-left: 1rem; /* Match left and right padding */
+    padding-right: 1rem; /* Match left and right padding */
+  }
+}
+
 /* Animation for form elements */
 @keyframes contactFadeInUp {
   from {
@@ -1532,18 +1772,18 @@ textarea.contact-form-control {
   animation-delay: 0.4s;
 }
 
-/* Fix for the "peaking" issue - Additional specific adjustments */
+
 #home {
-  padding-top: 0; /* No extra padding needed for home section */
+  padding-top: 0;
 }
 
 .highlight {
   color: #c3456b;
 }
 
-/* Ensure proper spacing between sections */
+
 section {
-  margin-bottom: 0; /* Reset general margin */
+  margin-bottom: 0; 
 }
 
 /* Custom cursor */
@@ -1576,11 +1816,11 @@ section {
   opacity: 0.3;
 }
 
-/* Add modal functionality for project cards */
+
 
 /* Modal container */
 .modal {
-  display: none; /* Hidden by default */
+  display: none; 
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -1588,7 +1828,7 @@ section {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+  background-color: rgba(0, 0, 0, 0.5); 
 }
 
 /* Modal content */
@@ -1622,23 +1862,23 @@ section {
 .modal-content h2 {
   font-family: 'Montserrat', sans-serif;
   color: #c3456b;
-margin-bottom: 15px; /* Add spacing below h2 */
+margin-bottom: 15px;
 }
 
 .modal-content p {
   font-family: 'Montserrat', sans-serif;
   color: #333;
-margin-bottom: 20px; /* Add spacing below p */
+margin-bottom: 20px; 
 }
 
-/* Add background to technologies in modal content */
+
 .modal-tech-tags span {
   display: inline-block;
-  background-color: #f8d7da; /* Light pink background */
-  color: #c3456b; /* Text color */
+  background-color: #f8d7da;
+  color: #c3456b;
   padding: 5px 10px;
   border-radius: 5px;
-  margin: 5px; /* Spacing between tags */
+  margin: 5px; 
   font-size: 0.9rem;
 }
 
@@ -1682,8 +1922,8 @@ margin-bottom: 20px; /* Add spacing below p */
 
 /* Footer Styles */
 footer {
-  background-color: #ffc5d6; /* Light pink background */
-  color: #c3456b; /* Darker pink text */
+  background-color: #ffc5d6;
+  color: #c3456b; 
   text-align: center;
   padding: 20px 0;
   font-family: "Courier Prime", monospace;
@@ -1691,7 +1931,7 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
-  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow at the top */
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .footer-container {
@@ -1713,7 +1953,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ff8da1; /* Slightly darker pink */
+  background-color: #ff8da1; 
   color: white;
   border-radius: 50%;
   font-size: 1.2rem;
@@ -1721,7 +1961,100 @@ footer {
 }
 
 .footer-social-icon:hover {
-  background-color: #c3456b; /* Darker pink on hover */
+  background-color: #c3456b; 
   transform: translateY(-3px);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles for smaller devices */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .hero-image img {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 0;
+  }
+
+  .hero-image::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 140px;
+    right: 125px;
+    background-color: rgba(255, 182, 193, 0.5);
+    border-radius: 50%;
+    z-index: 11; /* Increased z-index to bring it in front of the hero image */
+  }
+
+  .proj-items-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .proj-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .proj-featured-container {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .proj-featured-wrapper {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .skill-slider {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .skill-card {
+    margin: 1rem;
+  }
+
+  .pr-portfolio-main-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .pr-portfolio-expandable-card {
+    width: 100%;
+    left: 0;
+  }
+
+  .contact-content-grid {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-form-container,
+  .contact-info-container {
+    width: 100%;
+  }
 }
