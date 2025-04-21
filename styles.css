@@ -1027,10 +1027,10 @@ div.social-links {
   border: 6px solid black; /* Adjusted border size */
   border-radius: 20px; /* Adjusted border radius */
   position: absolute;
-  left: auto; /* Reset left alignment */
-  right: 100px; /* Move to the right in front of the pink background */
-  top: 180px; /* Adjust vertical position to align with the pink background */
-  z-index: 2; /* Ensure it appears behind the "About" text */
+  left: auto;
+  right: 100px; 
+  top: 180px; 
+  z-index: 2;
 }
 
 .pr-portfolio-phone-screen {
@@ -1040,9 +1040,9 @@ div.social-links {
   display: flex;
   flex-direction: column;
   border-radius: 15px;
-  background-image: url("src/grad pic.jpg"); /* Replace with the actual path to the grad pic */
-  background-size: cover; /* Ensure the image covers the screen */
-  background-position: center; /* Center the image */
+  background-image: url("grad pic.jpg");
+  background-size: cover; 
+  background-position: center; 
 }
 
 .pr-portfolio-phone-header {
