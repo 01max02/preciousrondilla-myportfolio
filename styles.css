@@ -182,3 +182,10 @@ footer { background: var(--ink); color: #d3cbdd; padding: 32px 6%; }
   .tl-item, .tl-item:nth-child(even) { width: 100%; margin-left: 0; padding: 0 0 28px 40px; }
   .tl-item::after, .tl-item:nth-child(even)::after { left: 0; right: auto; }
 }
+
+/* Certificate hover hint */
+.pr-portfolio-cert-box { position: relative; }
+.pr-portfolio-cert-box img { transition: transform .3s ease; }
+.pr-portfolio-cert-box::after { content: "Click to view"; position: absolute; inset: 0; display: grid; place-items: center; padding: 8px; text-align: center; font-weight: 600; font-size: .9rem; color: #fff; background: rgba(31, 24, 41, .68); opacity: 0; transition: opacity .25s ease; pointer-events: none; }
+.pr-portfolio-cert-box:hover::after { opacity: 1; }
+.pr-portfolio-cert-box:hover img { transform: scale(1.06); }
